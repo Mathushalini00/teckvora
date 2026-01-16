@@ -1,7 +1,7 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Layout from "../app/layout";
-import About from "../templates/about";
 import HomePage from "./templates/home";
+import Layout from "./app/layout";
+import About from "./templates/about";
 
 function ClientRouter() {
   return (
