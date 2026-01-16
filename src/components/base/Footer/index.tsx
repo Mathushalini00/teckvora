@@ -70,7 +70,6 @@ const Footer = () => {
             </ul>
           </div>
 
-          {/* Contact Info */}
           <div>
             <h4 className="text-white font-bold mb-6">Contact</h4>
             <ul className="space-y-4 text-sm text-slate-400">
@@ -89,7 +88,6 @@ const Footer = () => {
             </ul>
           </div>
 
-          {/* Newsletter */}
           <div>
             <h4 className="text-white font-bold mb-6">Stay Updated</h4>
             <p className="text-slate-400 text-sm mb-4">
@@ -108,7 +106,6 @@ const Footer = () => {
           </div>
         </div>
 
-        {/* Bottom Bar */}
         <div className="pt-8 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-6">
           <p className="text-slate-500 text-xs text-center md:text-left">
             © 2026 Teckvora Systems Inc. All rights reserved.
