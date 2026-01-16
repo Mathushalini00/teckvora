@@ -4,7 +4,6 @@ import Expertise from "./Expertise";
 import FAQ from "./Faq";
 import HeroPage from "./Hero";
 
-
 function HomePage() {
   return (
     <Layout>
