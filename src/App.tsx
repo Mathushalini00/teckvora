@@ -3,7 +3,7 @@ import HomePage from "./templates/home";
 import Layout from "./app/layout";
 import About from "./templates/about";
 
-function App() {
+export default function App() {
   return (
     <Router>
       <Layout>
