@@ -11,11 +11,9 @@ const stats = [
 const About = () => {
   return (
     <div className="relative pt-32 pb-20 px-6 overflow-hidden">
-      {/* Background Decorative Element */}
       <div className="orb w-[600px] h-[600px] bg-[#014e3a]/10 -top-20 -right-20 opacity-30" />
 
       <div className="max-w-7xl mx-auto">
-        {/* Hero Section of About Us */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center mb-32">
           <div className="text-left">
             <h1 className="text-5xl md:text-7xl font-black mb-8 tracking-tighter">
@@ -41,7 +39,6 @@ const About = () => {
             </div>
           </div>
 
-          {/* Abstract Glass Image Placeholder */}
           <div className="relative">
             <div className="sci-fi-glass aspect-square rounded-[3rem] overflow-hidden rotate-3 hover:rotate-0 transition-transform duration-700">
               <img
@@ -50,7 +47,6 @@ const About = () => {
                 className="w-full h-full object-cover opacity-60 grayscale hover:grayscale-0 transition-all duration-700"
               />
             </div>
-            {/* Overlay floating card */}
             <div className="absolute -bottom-10 -left-10 sci-fi-glass p-6 hidden md:block border-[#014e3a]/50">
               <FaRocket className="text-3xl text-[#014e3a] mb-2" />
               <h4 className="text-white font-bold">Innovation First</h4>
@@ -61,7 +57,6 @@ const About = () => {
           </div>
         </div>
 
-        {/* Mission & Values */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <ValueCard
             icon={<FaHistory />}

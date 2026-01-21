@@ -1,12 +1,9 @@
 import React from "react";
 import { FaArrowRight, FaCode, FaServer, FaShieldAlt } from "react-icons/fa";
-import Header from "../../../components/base/Header";
 
 const HeroPage = () => {
   return (
     <div className="relative min-h-screen w-full flex flex-col items-center overflow-x-hidden">
-      <Header />
-
       <div className="orb w-[250px] md:w-[500px] h-[250px] md:h-[500px] bg-[#014e3a] top-[5%] -left-10 opacity-20" />
       <div className="orb w-[200px] md:w-[400px] h-[200px] md:h-[400px] bg-emerald-900 bottom-[5%] -right-10 opacity-10" />
 
