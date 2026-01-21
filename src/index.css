@@ -3,24 +3,34 @@
 @layer base {
   body {
     @apply bg-[#020617] text-white antialiased overflow-x-hidden;
-    /* Deep space texture */
-    background-image: radial-gradient(
+    background-image:
+      radial-gradient(
         circle at 50% 50%,
-        rgba(1, 78, 58, 0.1) 0%,
-        transparent 80%
+        rgba(1, 78, 58, 0.05) 0%,
+        transparent 70%
       ),
       url("https://www.transparenttextures.com/patterns/stardust.png");
+    background-attachment: fixed; /* Keep stardust static so text glides over it */
   }
 }
 
 .sci-fi-glass {
-  background: rgba(255, 255, 255, 0.01);
-  backdrop-filter: blur(12px) saturate(180%);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  /* Darker base (0.7) for maximum text contrast */
+  background: linear-gradient(
+    135deg,
+    rgba(10, 15, 30, 0.8) 0%,
+    rgba(2, 6, 23, 0.9) 100%
+  );
+  backdrop-filter: blur(20px) saturate(180%);
+  border: 1px solid rgba(255, 255, 255, 0.08);
   border-radius: 2rem;
-  box-shadow: 0 0 40px rgba(0, 0, 0, 0.5);
+  /* Glow effect using your brand teal */
+  box-shadow:
+    0 20px 50px rgba(0, 0, 0, 0.5),
+    inset 0 0 20px rgba(1, 78, 58, 0.05);
 }
 
 .orb {
-  @apply absolute rounded-full blur-[80px] opacity-50 animate-pulse;
+  /* Reduced blur and opacity to prevent "clouding" the text */
+  @apply absolute rounded-full blur-[120px] opacity-20 animate-pulse pointer-events-none;
 }
