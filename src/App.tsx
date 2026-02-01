@@ -7,6 +7,7 @@ import Careers from "./templates/careers";
 import Contact from "./templates/contact";
 import Services from "./templates/services";
 import ServiceDetail from "./templates/services/service";
+import BlogDetail from "./templates/blog/details";
 
 export default function App() {
   return (
@@ -16,6 +17,7 @@ export default function App() {
           <Route path="/" element={<HomePage />} />
           <Route path="/about" element={<About />} />
           <Route path="/blogs" element={<Blogs />} />
+          <Route path="/blogs/:slug" element={<BlogDetail />} />
           <Route path="/careers" element={<Careers />} />
           <Route path="/contact" element={<Contact />} />
 
