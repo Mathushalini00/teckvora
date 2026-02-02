@@ -1,4 +1,3 @@
-import React from "react";
 import { useParams, Link } from "react-router-dom";
 import {
   FaCode,
@@ -10,7 +9,6 @@ import {
   FaCheckCircle,
 } from "react-icons/fa";
 
-// Data Object - This acts as your "database" for service content
 const serviceContent: any = {
   "web-development": {
     title: "Web Development",
