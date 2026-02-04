@@ -41,14 +41,14 @@ const Contact = () => {
               <ContactMethod
                 icon={<FaEnvelope />}
                 title="Email Us"
-                detail="hello@teckvora.io"
-                sub="General & Sales inquiries"
+                detail="info@teckvora.com"
+                sub="General inquiries"
               />
               <ContactMethod
                 icon={<FaMapMarkerAlt />}
                 title="Our HQ"
-                detail="123 Innovation Way, Silicon Valley"
-                sub="9:00 AM - 6:00 PM PST"
+                detail="Navaly South, Manipay"
+                sub="9:00 AM - 5:00 PM"
               />
             </div>
 
