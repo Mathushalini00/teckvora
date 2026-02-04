@@ -58,7 +58,7 @@ const BlogDetail = () => {
 
       {post.image && (
         <img
-          src={post.image}
+          src={post.banner_image}
           alt={post.title}
           className="w-full h-[450px] object-cover rounded-2xl mb-12 sci-fi-glass p-1 border border-white/5"
         />
@@ -71,9 +71,9 @@ const BlogDetail = () => {
         <h1 className="text-5xl md:text-6xl font-black text-white tracking-tighter leading-tight">
           {post.title}
         </h1>
-        <p className="text-slate-500 text-sm font-mono uppercase tracking-widest">
+        {/* <p className="text-slate-500 text-sm font-mono uppercase tracking-widest">
           Authored: {new Date(post.createdAt).toLocaleDateString()}
-        </p>
+        </p> */}
       </div>
 
       <div
