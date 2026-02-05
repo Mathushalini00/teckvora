@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { FaPlus, FaMinus, FaEnvelope } from "react-icons/fa";
 
 const faqs = [
