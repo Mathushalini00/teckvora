@@ -2,6 +2,7 @@ import Testimonials from "./Clients";
 import Expertise from "./Expertise";
 import FAQ from "./Faq";
 import HeroPage from "./Hero";
+import FeaturedProjects from "./Projects";
 
 function HomePage() {
   return (
@@ -12,6 +13,10 @@ function HomePage() {
 
       <section id="services">
         <Expertise />
+      </section>
+
+      <section id="projects">
+        <FeaturedProjects />
       </section>
 
       <section id="testimonials">

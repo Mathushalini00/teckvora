@@ -3,97 +3,95 @@ import {
   FaCloud,
   FaShieldAlt,
   FaBrain,
-  FaMobileAlt,
-  FaDatabase,
+  FaLayerGroup,
+  FaChartLine,
 } from "react-icons/fa";
 
 const expertiseData = [
   {
     id: "01",
-    title: "Custom Software",
-    desc: "Bespoke enterprise solutions built with React and Node.js, optimized for scalability.",
+    title: "Custom Build Software",
+    desc: "We build powerful, unique software that fits your business perfectly and grows as you do.",
     icon: <FaCode />,
-    tags: ["React", "TypeScript", "Next.js"],
+    tags: ["Web Apps", "Custom Tools", "Fast Logic"],
   },
   {
     id: "02",
-    title: "Cloud Infrastructure",
-    desc: "Secure AWS/Azure deployments with 99.9% uptime and automated CI/CD pipelines.",
+    title: "Cloud & Hosting",
+    desc: "We set up secure online homes for your data that never go down, even during your busiest hours.",
     icon: <FaCloud />,
-    tags: ["AWS", "Docker", "Kubernetes"],
+    tags: ["AWS/Azure", "No Downtime", "Secure"],
   },
   {
     id: "03",
-    title: "Cyber Security",
-    desc: "End-to-end encryption and penetration testing to keep your data bulletproof.",
+    title: "Digital Security",
+    desc: "We lock down your systems with the latest protection to keep your company and customer data safe.",
     icon: <FaShieldAlt />,
-    tags: ["OAuth 2.0", "SSL", "Encryption"],
+    tags: ["Data Safety", "Safe Login", "Privacy"],
   },
   {
     id: "04",
-    title: "AI & Automation",
-    desc: "Integrating Machine Learning models to automate complex business workflows.",
+    title: "AI Solutions",
+    desc: "We use smart technology to help your computers handle repetitive tasks and make better decisions.",
     icon: <FaBrain />,
-    tags: ["Python", "TensorFlow", "NLP"],
+    tags: ["Smart Bots", "Auto-Tasks", "Data Prediction"],
   },
   {
     id: "05",
-    title: "Mobile Solutions",
-    desc: "High-performance native and cross-platform mobile apps for iOS and Android.",
-    icon: <FaMobileAlt />,
-    tags: ["React Native", "Flutter", "Swift"],
+    title: "Full Digital Products",
+    desc: "We handle everything from the hidden database to the screen your customers actually see and use.",
+    icon: <FaLayerGroup />,
+    tags: ["User Experience", "Databases", "Front-end"],
   },
   {
     id: "06",
-    title: "Big Data & BI",
-    desc: "Turning raw data into actionable insights with advanced analytics dashboards.",
-    icon: <FaDatabase />,
-    tags: ["PostgreSQL", "MongoDB", "Redis"],
+    title: "Business Growth",
+    desc: "We connect all your different apps and tools so they talk to each other and save you time.",
+    icon: <FaChartLine />,
+    tags: ["Integration", "Speed", "Analytics"],
   },
 ];
 
 const Expertise = () => {
   return (
-    <section id="services" className="relative py-24 px-6 scroll-mt-20">
+    <section
+      id="services"
+      className="relative py-24 px-6 scroll-mt-20 bg-[#020617]"
+    >
       <div className="max-w-7xl mx-auto">
         {/* Header Section */}
-        <div className="flex flex-col md:flex-row justify-between items-end mb-16 gap-6">
-          <div className="max-w-2xl text-left">
-            <h2 className="text-[#014e3a] font-bold tracking-widest uppercase text-sm mb-4">
-              Our Expertise
+        <div className="flex flex-col md:flex-row justify-between items-end mb-20 gap-8">
+          <div className="max-w-3xl text-left border-l-4 border-[#014e3a] pl-8">
+            <h2 className="text-[#014e3a] font-bold tracking-widest uppercase text-xs mb-4">
+              What We Do Best
             </h2>
-            <h3 className="text-4xl md:text-5xl font-extrabold text-white leading-tight">
-              Solving Complex Problems <br />
-              With <span className="italic font-light">Digital Precision</span>
+            <h3 className="text-4xl md:text-6xl font-black text-white leading-tight">
+              Powerful Tech <br />
+              <span className="text-emerald-400">Made Simple.</span>
             </h3>
           </div>
-          <p className="text-slate-400 max-w-sm text-left md:text-right">
-            We don't just write code; we architect systems that drive global
-            industries forward.
+          <p className="text-slate-400 max-w-sm text-left md:text-right text-sm leading-relaxed">
+            We take the stress out of technology so you can focus on running
+            your business and reaching more customers.
           </p>
         </div>
 
         {/* Expertise Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {expertiseData.map((item) => (
             <div
               key={item.id}
-              className="sci-fi-glass group p-8 relative overflow-hidden transition-all duration-500 hover:-translate-y-2 hover:border-[#014e3a]/40"
+              className="sci-fi-glass group p-8 relative overflow-hidden transition-all duration-500 hover:border-[#014e3a]/40 bg-white/[0.02] rounded-xl"
             >
-              {/* Background ID Number */}
-              <span className="absolute -top-2 -right-2 text-8xl font-black text-white/[0.03] group-hover:text-[#014e3a]/10 transition-colors">
-                {item.id}
-              </span>
-
               <div className="relative z-10">
-                <div className="w-14 h-14 bg-[#014e3a]/10 rounded-2xl flex items-center justify-center text-[#014e3a] text-2xl mb-6 border border-[#014e3a]/20 group-hover:bg-[#014e3a] group-hover:text-white transition-all">
+                <div className="w-14 h-14 bg-[#014e3a]/10 rounded-xl flex items-center justify-center text-[#014e3a] text-2xl mb-6 border border-[#014e3a]/20 group-hover:bg-[#014e3a] group-hover:text-white transition-all duration-300">
                   {item.icon}
                 </div>
 
-                <h4 className="text-2xl font-bold text-white mb-4">
+                <h4 className="text-xl font-bold text-white mb-3">
                   {item.title}
                 </h4>
-                <p className="text-slate-400 text-sm leading-relaxed mb-6">
+                <p className="text-slate-400 text-sm leading-relaxed mb-8">
                   {item.desc}
                 </p>
 
@@ -102,7 +100,7 @@ const Expertise = () => {
                   {item.tags.map((tag) => (
                     <span
                       key={tag}
-                      className="text-[10px] font-bold px-3 py-1 rounded-full bg-white/5 border border-white/10 text-slate-300 group-hover:border-[#014e3a]/30 transition-colors"
+                      className="text-[10px] font-semibold px-3 py-1 bg-white/5 border border-white/10 text-slate-400 group-hover:text-white transition-all rounded-md"
                     >
                       {tag}
                     </span>
