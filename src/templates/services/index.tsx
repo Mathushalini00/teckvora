@@ -50,12 +50,11 @@ const Services = () => {
         <div className="text-[#014e3a] text-7xl mb-8 flex justify-center animate-pulse">
           {data.icon}
         </div>
-        <h1 className="text-5xl md:text-7xl font-black text-white mb-8 tracking-tighter">
+        <h1 className="text-5xl md:text-6xl font-black text-white mb-8 tracking-tighter">
           {data.title}
         </h1>
         <p className="text-slate-400 text-xl leading-relaxed">{data.desc}</p>
 
-        {/* Placeholder for project showcase */}
         <div className="mt-20 grid grid-cols-1 md:grid-cols-2 gap-8">
           <div className="sci-fi-glass h-64 border-white/5"></div>
           <div className="sci-fi-glass h-64 border-white/5"></div>

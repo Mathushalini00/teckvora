@@ -2,10 +2,10 @@ import React from "react";
 import { FaHistory, FaUsers, FaLightbulb, FaRocket } from "react-icons/fa";
 
 const stats = [
-  { label: "Founded", value: "2018" },
-  { label: "Projects Delivered", value: "250+" },
-  { label: "Experts", value: "45+" },
-  { label: "Countries", value: "12" },
+  { label: "Founded", value: "2025" },
+  { label: "Projects Delivered", value: "10+" },
+  { label: "Experts", value: "5+" },
+  { label: "Countries", value: "1+" },
 ];
 
 const About = () => {
@@ -59,19 +59,19 @@ const About = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <ValueCard
-            icon={<FaHistory />}
-            title="Our Story"
-            desc="Starting as a small group of encryption experts, we've scaled into a full-service software powerhouse."
-          />
-          <ValueCard
-            icon={<FaLightbulb />}
-            title="Our Vision"
-            desc="To democratize high-concurrency computing for businesses of all sizes, from startups to titans."
-          />
-          <ValueCard
             icon={<FaUsers />}
             title="Our Culture"
             desc="We believe in radical transparency and absolute precision in every line of code we ship."
+          />
+          <ValueCard
+            icon={<FaHistory />}
+            title="Our Vision"
+            desc="To become a globally trusted digital solutions company, delivering innovative web, software, marketing, e-commerce, and design services that empower businesses worldwide."
+          />
+          <ValueCard
+            icon={<FaLightbulb />}
+            title="Our Mission"
+            desc="Our mission is to help businesses across the globe achieve digital transformation, scalable growth, and strong brand presence through cutting-edge technology and creative excellence.."
           />
         </div>
       </div>

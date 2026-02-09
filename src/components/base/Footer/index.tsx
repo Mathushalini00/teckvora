@@ -1,4 +1,3 @@
-import React from "react";
 import { IoDiamondOutline } from "react-icons/io5";
 import {
   FaGithub,
@@ -10,6 +9,8 @@ import {
   FaMapMarkerAlt,
   FaPhoneAlt,
 } from "react-icons/fa";
+import LogoImg from "../../../assets/logo.png";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   const scrollToTop = () => {
@@ -28,9 +29,17 @@ const Footer = () => {
             <div className="flex items-center gap-2 font-black text-2xl tracking-widest text-white">
               <div className="relative flex items-center justify-center">
                 <div className="absolute inset-0 bg-[#014e3a] blur-md opacity-50 animate-pulse" />
-                <IoDiamondOutline className="relative text-[#014e3a]" />
               </div>
-              <span>Teckvora</span>
+              <Link to="/" className="flex items-center gap-3 z-[1100] group">
+                <div className="relative">
+                  <img
+                    src={LogoImg}
+                    alt="Teckvora Logo"
+                    className="h-8 w-auto object-contain transition-transform duration-300 group-hover:scale-110"
+                  />
+                  <div className="absolute inset-0 bg-[#014e3a] blur-xl opacity-20 group-hover:opacity-40 transition-opacity" />
+                </div>
+              </Link>
             </div>
             <p className="text-slate-400 text-sm leading-relaxed">
               Architecting the next generation of enterprise software with
@@ -47,7 +56,7 @@ const Footer = () => {
                   >
                     <Icon size={18} />
                   </a>
-                )
+                ),
               )}
             </div>
           </div>

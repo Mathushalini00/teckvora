@@ -38,7 +38,7 @@ const Blogs = () => {
         setError("Connection Interrupted: Backend Protocol Offline.");
       } finally {
         setLoading(false);
-      }
+      }69
     };
     fetchBlogs();
   }, []);

@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import { IoMenu, IoClose, IoChevronDown } from "react-icons/io5";
-
+import LogoImg from "../../../assets/logo.png";
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
@@ -16,14 +16,17 @@ const Header = () => {
 
   return (
     <header className="fixed top-4 md:top-6 w-[95%] max-w-6xl z-[1000] left-1/2 -translate-x-1/2">
-      <nav className="sci-fi-glass px-6 md:px-8 py-4 flex items-center justify-between border-white/10 shadow-2xl relative">
-        {/* Logo */}
-        <Link
-          to="/"
-          className="flex items-center gap-2 font-black text-xl tracking-widest z-[1100]"
-        >
-          <span className="text-white">Teckvora</span>
-          <div className="w-2 h-2 rounded-full bg-[#014e3a] animate-pulse shadow-[0_0_10px_#014e3a]" />
+      <nav className="sci-fi-glass px-6 md:px-8 py-3 flex items-center justify-between border-white/10 shadow-2xl relative">
+        {/* Updated Logo Section */}
+        <Link to="/" className="flex items-center gap-3 z-[1100] group">
+          <div className="relative">
+            <img
+              src={LogoImg}
+              alt="Teckvora Logo"
+              className="h-8 w-auto object-contain transition-transform duration-300 group-hover:scale-110"
+            />
+            <div className="absolute inset-0 bg-[#014e3a] blur-xl opacity-20 group-hover:opacity-40 transition-opacity" />
+          </div>
         </Link>
 
         {/* Desktop Menu */}
@@ -35,7 +38,7 @@ const Header = () => {
             About
           </Link>
 
-          {/* Services Dropdown Trigger */}
+          {/* Services Dropdown */}
           <div
             className="relative py-2"
             onMouseEnter={() => setIsDropdownOpen(true)}
@@ -50,7 +53,6 @@ const Header = () => {
               />
             </button>
 
-            {/* The Dropdown Menu - Fixed Visibility */}
             <div
               className={`
               absolute top-full left-1/2 -translate-x-1/2 mt-3 w-64 
@@ -59,9 +61,6 @@ const Header = () => {
               ${isDropdownOpen ? "opacity-100 visible translate-y-0 scale-100" : "opacity-0 invisible -translate-y-4 scale-95"}
             `}
             >
-              {/* Triangle Pointer */}
-              <div className="absolute -top-1 left-1/2 -translate-x-1/2 w-3 h-3 bg-[#020617] rotate-45 border-t border-l border-white/10" />
-
               <div className="relative z-10 grid gap-1">
                 {services.map((s) => (
                   <Link
@@ -89,9 +88,12 @@ const Header = () => {
           </Link>
         </div>
 
-        <button className="hidden lg:block bg-[#014e3a] hover:bg-[#01634a] px-6 py-2 rounded-xl text-sm font-bold text-white shadow-[0_0_15px_rgba(1,78,58,0.3)] transition-all">
+        <Link
+          to="/contact"
+          className="hidden lg:block bg-[#014e3a] hover:bg-[#01634a] px-6 py-2 rounded-xl text-sm font-bold text-white shadow-[0_0_15px_rgba(1,78,58,0.3)] transition-all z-[1100]"
+        >
           Get Started
-        </button>
+        </Link>
 
         {/* Mobile Toggle */}
         <button
